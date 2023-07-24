@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #8e9eab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eef2f3,
+    #8e9eab
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #eef2f3,
+    #8e9eab
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Tomorrow", sans-serif;
+}
+
+.calculator {
+  background-color: #e8e8ec;
+  width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.5);
+  border-color: #57555f;
+  border-style: solid;
+  border-width: 0 20px 20px 20px;
+}
+
+.calculator-display {
+  background-color: #91978d;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%235d5c60' fill-opacity='0.18'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: black;
+  margin: 20px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 5px;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 20px 25px;
+  overflow-x: auto;
+}
+
+.calculator-display h1::selection {
+  background-color: black;
+  color: white;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.equal-sign {
+  grid-column: 4;
+  grid-row: 2 / span 4;
+}
+
+button {
+  min-height: 50px;
+  border: 1px solid #4b4657;
+  border-top: 2px solid #7c748f;
+  background-image: -webkit-linear-gradient(top, #4b4657, #332f3b);
+  background-image: linear-gradient(to bottom, #4b4657, #332f3b);
+  color: white;
+  font-size: 24px;
+  border-radius: 20%;
+  border-top-left-radius: 80% 10px;
+  border-top-right-radius: 80% 10px;
+  border-bottom-left-radius: 100% 10px;
+  border-bottom-right-radius: 100% 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  box-shadow: inset 0 1px 4px #7c748f, inset 0 -4px 20px #332f3b,
+    0 2px 1px 0 #332f3b;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 1px 4px #7c748f, inset 0 -4px 20px #332f3b;
+}
+
+.operator {
+  font-size: 30px;
+  border: 1px solid #201d25;
+  border-top: 2px solid #423d4d;
+  background-image: -webkit-linear-gradient(top, #25222b, #1d1b22);
+  background-image: linear-gradient(to bottom, #25222b, #1d1b22);
+  box-shadow: inset 0 1px 4px #423d4d, inset 0 -4px 20px #1d1b22,
+    0 2px 1px 0 #1d1b22;
+}
+
+.operator:active {
+  box-shadow: inset 0 1px 4px #423d4d, inset 0 -4px 20px #1d1b22;
+}
+
+.clear {
+  border: 1px solid #b12020;
+  border-top: 2px solid #f02f2f;
+  background-image: -webkit-linear-gradient(top, #dc2424, #a80b0b);
+  background-image: linear-gradient(to bottom, #dc2424, #a80b0b);
+  box-shadow: inset 0 1px 4px #f02f2f, inset 0 -4px 20px #a80b0b,
+    0 2px 1px 0 #a80b0b;
+}
+
+.clear:active {
+  box-shadow: inset 0 1px 4px #f02f2f, inset 0 -4px 20px #a80b0b;
+}
+
+.equal-sign {
+  border: 1px solid #00b100;
+  border-top: 2px solid #3ff33f;
+  background-image: -webkit-linear-gradient(top, #04ac04, #099b09);
+  background-image: linear-gradient(to bottom, #04dc04, #099b09);
+  box-shadow: inset 0 1px 4px #3ff33f, inset 0 -4px 20px #099b09,
+    0 2px 1px 0 #099b09;
+}
+
+.equal-sign:active {
+  box-shadow: inset 0 1px 4px #3ff33f, inset 0 -4px 20px #099b09;
+}
+
+a {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #00003a;
+  font-size: 20px;
+}
+
+/* For mobile */
+@media screen and (max-width: 600px) {
+  .calculator {
+    max-width: 95%;
+  }
+}
